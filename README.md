@@ -1,6 +1,9 @@
-# next-hacker-new
+# next-hacker-news
+A Hacker News clone (PWA) with offline functionality built with Next.js
 
-### Install dependecies
+Production:
+
+### Install dependencies
 
 ```bash
 npm install
