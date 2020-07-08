@@ -1,5 +1,5 @@
 # next-hacker-news
-A Hacker News clone (PWA) with offline functionality built with Next.js
+A Hacker News clone (PWA) with offline functionality built with Next.js using service worker via next-offline.
 
 ✅ Production: https://next-hacker-pwa.vercel.app/
 

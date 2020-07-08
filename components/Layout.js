@@ -44,7 +44,7 @@ function Layout({ children, pageTitle, docTitle }) {
           color: #757575;
           background-size: 260px;
           font-family: Inter, system-ui, sans-serif;
-          padding: 0 1rem;
+          padding: 0 0.75rem;
           scroll-behavior: smooth;
           background-attachment: fixed;
           min-height: 100vh;
@@ -67,17 +67,20 @@ function Layout({ children, pageTitle, docTitle }) {
           transform: translateY(1px);
         }
 
-        .o-main {
-          padding: 2rem 0;
+        @media (min-width: 768px) {
+          .o-main {
+            padding: 2rem 0;
+          }
         }
 
         header h1 {
-          font-size: 44px;
+          font-size: 34px;
           letter-spacing: -0.04em;
           font-weight: 800;
           display: flex;
           align-items: center;
           margin: 0 0 2rem 0;
+          flex-direction: column;
         }
 
         header h1 a {
@@ -93,7 +96,7 @@ function Layout({ children, pageTitle, docTitle }) {
           content: "Y";
           width: 50px;
           height: 50px;
-          margin-right: 1rem;
+          margin: 0 0 0.8rem;
           background-color: #fff;
           border-radius: 22% 22% 22% 22% / 20% 20% 20% 20%;
           color: #2bb24c;
@@ -106,6 +109,17 @@ function Layout({ children, pageTitle, docTitle }) {
           border: 14px solid #2bb24c;
         }
 
+        @media (min-width: 300px) {
+          header h1 {
+            flex-direction: row;
+            font-size: 38px;
+          }
+
+          header h1:before {
+            margin: 0 1rem 0 0;
+          }
+        }
+
         @media (min-width: 768px) {
           header h1 {
             font-size: 60px;
@@ -115,7 +129,7 @@ function Layout({ children, pageTitle, docTitle }) {
 
         footer,
         header {
-          padding: 3rem 0;
+          padding: 2rem 0;
         }
 
         @media (min-width: 768px) {
@@ -124,14 +138,30 @@ function Layout({ children, pageTitle, docTitle }) {
             justify-content: space-between;
             align-items: center;
           }
+
+          footer,
+          header {
+            padding: 3rem 0;
+          }
         }
 
         footer {
           font-size: 16px;
+          line-height: 1.5;
         }
 
         footer a:hover {
           text-decoration: underline;
+        }
+
+        nav {
+          display: none;
+        }
+
+        @media (min-width: 768px) {
+          nav {
+            display: block;
+          }
         }
 
         nav a {

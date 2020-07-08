@@ -110,8 +110,14 @@ function Home({ stories, page }) {
         }
 
         .c-pagenumber:after {
-          width: 35px;
+          width: 100%;
           margin-left: 0.6rem;
+        }
+
+        @media (min-width: 786px) {
+          .c-pagenumber:after {
+            width: 35px;
+          }
         }
 
         .c-pagenumber strong {

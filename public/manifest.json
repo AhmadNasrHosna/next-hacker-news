@@ -1,7 +1,7 @@
 {
   "name": "Next Hacker",
-  "short_name": "next-hacker-sw",
-  "description": "Nextjs using service worker via next-offline",
+  "short_name": "Hacker News",
+  "description": "A Hacker News clone (PWA) with offline functionality built with Next.js using service worker via next-offline.",
   "icons": [
     {
       "src": "/static/icons/icon-512x512.png",
@@ -15,7 +15,7 @@
     }
   ],
   "theme_color": "#2bb24c",
-  "background_color": "#2bb24c",
+  "background_color": "#222222",
   "start_url": "/",
   "display": "standalone"
 }

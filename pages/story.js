@@ -76,11 +76,17 @@ function Story({ story }) {
       </div>
       <style jsx>{`
         .c-story {
-          padding: 1rem 1.25rem 1.6rem;
+          padding: 0.9rem 1rem 1.5rem;
           background: rgba(255, 255, 255, 0.05);
           border-radius: 4px;
           border: 3px solid hsla(0, 0%, 46%, 0.3);
           position: relative;
+        }
+
+        @media (min-width: 768px) {
+          .c-story {
+            padding: 1rem 1.25rem 1.6rem;
+          }
         }
 
         .c-story__title {
@@ -106,7 +112,7 @@ function Story({ story }) {
           justify-content: center;
           position: absolute;
           top: -15px;
-          right: -15px;
+          right: 8px;
           pointer-events: none;
           background: #757575;
         }
@@ -119,8 +125,18 @@ function Story({ story }) {
         }
 
         .c-story__title:hover div {
-          transform: translateX(7px);
+          transform: translateY(-7px);
           background: #2bb24c;
+        }
+
+        @media (min-width: 768px) {
+          .c-story__title div {
+            right: -15px;
+          }
+
+          .c-story__title:hover div {
+            transform: translateX(7px);
+          }
         }
 
         .c-story__title:hover svg {
@@ -147,12 +163,19 @@ function Story({ story }) {
 
         .c-story__comments {
           background: hsla(0, 0%, 13%, 0.6);
-          margin: 0 -1.25rem -1.6rem;
-          padding: 1rem 1.25rem;
+          padding: 0.8rem 1rem;
+          margin: 0 -1rem -1.4rem;
           border-top: 3px solid hsla(0, 0%, 100%, 0.15);
           color: hsla(0, 0%, 56%, 1);
           line-height: 1.75;
           letter-spacing: 0.01em;
+        }
+
+        @media (min-width: 768px) {
+          .c-story__comments {
+            margin: 0 -1.25rem -1.6rem;
+            padding: 1rem 1.25rem;
+          }
         }
 
         .c-story__comments h2 {
